@@ -1,0 +1,153 @@
+[
+  {
+    "id":1,
+    "name":"LEBRON JAMES",
+    "type": "BasketBall",
+    "description":"2003 Topps Draft Day",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117378/LBJRookieC-1_m5c0lr.jpg"
+
+  },
+  {
+    "id":2,
+    "name":"STEPH CURRY",
+    "type": "BasketBall",
+    "description":"2017 PSA Panini Optic Steph Curry",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117371/CURRY-1_wsvbqc.jpg"
+
+  },
+  {
+    "id":3,
+    "name":"GIANNIS ANTETOKOUNMPO",
+    "type": "BasketBall",
+    "description":"2019 PSA Panini Chronicles",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Closed",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117372/GIANNIS-1_rxj9yp.jpg"
+
+  },
+  {
+    "id":4,
+    "name":"KYRIE IRVING",
+    "type": "BasketBall",
+    "description":"PSA Panini Hoops",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117372/KAI-1_qreyrj.jpg"
+
+  },
+  {
+    "id":5,
+    "name":"KEVIN DURANT",
+    "type": "BasketBall",
+    "description":"2007 Upper Deck",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117374/KD-1_jmzqi8.jpg"
+
+  },
+  {
+    "id":6,
+    "name":"KOBE BRYANT",
+    "type": "BasketBall",
+    "description":"2019 Panini Prizm Kobe Final Game",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Closed",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117377/KobeFinalgame-1_ywy1gb.jpg"
+
+  },
+  {
+    "id":7,
+    "name":"MICHAEL JORDAN",
+    "type": "BasketBall",
+    "description":"1990 FLEER Michael Jordan",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Closed",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117380/MJ1990-1_rdc5u4.jpg"
+
+  },
+  {
+    "id":8,
+    "name":"CARMELO ANTHONY",
+    "type": "BasketBall",
+    "description":"2003 UPPER DECK ROOKIE",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Closed",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727226947/CarmeloRookie_cfossm.jpg"
+
+  },
+  {
+    "id":9,
+    "name":"MIKE TROUT",
+    "type": "BaseBall",
+    "description":"2013 TOPPS",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117438/Mike-1_bx61ai.jpg"
+
+  },
+  {
+    "id":10,
+    "name":"AARON JUDGE",
+    "type": "BaseBall",
+    "description":"2022 TOPPS NOW",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117436/AJUDGE-1_jal7hs.jpg"
+
+  },
+  {
+    "id":11,
+    "name":"MOOKIE BETTS",
+    "type": "BaseBall",
+    "description":"2023 BOWMAN MEGA BOX",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117439/Mookie-1_lb5wvd.webp"
+
+  },
+  {
+    "id":12,
+    "name":"SHOHEI OHTANI",
+    "type": "BaseBall",
+    "description":"2018 TOPPS UPDATE",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117441/OHTANI-1_ynhrnd.jpg"
+  },
+  {
+    "id":13,
+    "name":"JUAN SOTO",
+    "type": "BaseBall",
+    "description":"2018 TOPPS CHROME",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117443/SOTO-1_arai9e.webp"
+  },
+  {
+    "id":14,
+    "name":"VLADIMIR GUERRERO JR.",
+    "type": "BaseBall",
+    "description":"2019 TOPPS UPDATE",
+    "startingPrice":"2500",
+    "currentPrice": "2500",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117444/VLAD-1_fcsims.jpg"
+  }
+]
