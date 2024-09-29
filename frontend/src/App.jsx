@@ -7,7 +7,7 @@ import Details from "./components/Details";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Basketball from "./components/Basketball";
-import Baseball from "./components/BaseBall";
+import Baseball from "./components/Baseball";
 import Layout from "./components/Layout";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
     
         <Routes>
           
-          <Route path="/products" element={<Products/>}/>
+          <Route path="/cards" element={<Products/>}/>
           <Route path="/" element={<Home/>}/>
           <Route path="/home" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>

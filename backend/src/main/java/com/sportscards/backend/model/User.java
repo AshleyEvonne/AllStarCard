@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -21,10 +22,6 @@ public class User {
     private String email;
     private String password;
 
-    @OneToMany(mappedBy = "user")
-    private List<Card> cards; // Represents cards created by the user
-
-    @OneToMany(mappedBy = "user")
-    private List<Bid> bids; // Represents bids made by the user
-
+    @OneToMany
+    private List<Card> trophyCards = new ArrayList<>();
 }

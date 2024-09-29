@@ -7,7 +7,6 @@ import lombok.*;
 
 import com.sportscards.backend.model.User;
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 @AllArgsConstructor
@@ -16,41 +15,38 @@ import java.util.List;
 @Entity
 @Table(name="card")
 public class Card {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    @Column(name="card_id")
     private Integer id;
 
-//    @Column(name="name", nullable = false, length = 100)
+    //    @Column(name="name", nullable = false, length = 100)
     private String name;
 
-//    @Column(name="type")
+    //    @Column(name="type")
     private String type;
 
-//    @Column(name="description", columnDefinition = "TEXT")
+    //    @Column(name="description", columnDefinition = "TEXT")
     private String description;
 
-//    @Column(name="starting_price", nullable = false, precision = 10)
+    //    @Column(name="starting_price", nullable = false, precision = 10)
     private double startingPrice;
 
-//    @Column(name="current_price", precision = 10)
+    //    @Column(name="current_price", precision = 10)
     private double currentPrice;
 
-//    @Enumerated(EnumType.STRING)
+    //    @Enumerated(EnumType.STRING)
 //    @Column(name="status", nullable = false)
     private String status;
 
-    @ManyToOne
-    @JoinColumn(name="user_id")
-    private User user; // Represents the user who created the card
 
-//    @Column(name="creation_date", columnDefinition ="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    //    @Column(name="creation_date", columnDefinition ="TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime creationDate;
 
-//    @Column(name="image_url")
+    //    @Column(name="image_url")
     private String imageUrl;
 
-    @OneToMany(mappedBy="card")
-    private List<Bid> bids; //Represents all bids related tp the card
 
+    private LocalDateTime bidTime;
 
 }

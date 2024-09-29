@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">About SportsBid</h3>
+              <h3 className="text-xl font-semibold mb-4">About AllStar Cards</h3>
               <p>We're passionate about connecting sports card collectors with their dream cards through exciting online auctions.</p>
             </div>
             <div>
@@ -28,7 +28,7 @@ export default function Layout({ children }) {
             </div>
           </div>
           <div className="mt-8 text-center">
-            <p>&copy; 2023 SportsBid. All rights reserved.</p>
+            <p>&copy; 2023 AllStar Cards. All rights reserved.</p>
           </div>
         </div>
       </footer>

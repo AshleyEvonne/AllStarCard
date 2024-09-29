@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -17,21 +15,12 @@ public class Bid {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name="card_id", nullable=false)
-  private Card card;
+    @Column(name="card_id", nullable = false)
+    private Integer cardId; // References the Card entity
 
-    @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
-   private User user;
+    @Column(name="user_id", nullable = false)
+    private Integer userId;
 
 
     private Double amount;
-    private LocalDateTime bidTime;
-
-    public void setCard(Card cardId) {
-    }
-
-    public void setUser(User userId) {
-    }
 }

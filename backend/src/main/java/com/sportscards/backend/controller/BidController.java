@@ -18,10 +18,6 @@ public class BidController {
     private BidService bidService;
 
     @PostMapping
-//    public ResponseEntity<Bid> placeBid(@RequestParam Card cardId, @RequestParam User userId, @RequestParam Double amount){
-//        Bid bid = bidService.placeBid(cardId, userId, amount);
-//        return ResponseEntity.ok(bid);
-//    }
     public ResponseEntity<Bid> createBid(@RequestBody Bid bid) {
         return ResponseEntity.ok(bidService.createBid(bid));
     }
@@ -33,15 +29,32 @@ public class BidController {
         return ResponseEntity.ok(bid);
     }
 
+    @GetMapping("/card/{cardId}")
+    public ResponseEntity<?> getBidByCardId(@PathVariable Integer cardId) {
+        Bid bid = bidService.getBidByCardId(cardId);
+        if (bid != null) {
+            return ResponseEntity.ok().body(bid);
+        } else {
+            return ResponseEntity.badRequest().body("Oops no bid");
+        }
+    }
+
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBid(@PathVariable Integer id){
         bidService.deleteBidById(id);
         return ResponseEntity.noContent().build();
     }
 
-//    @PutMapping
-//    public ResponseEntity<Bid> createBid(@RequestBody Bid bid){
-//        Bid savedBid = bidService.save(bid);
-//        return ResponseEntity.ok(savedBid);
-//    }
+
+    // API to get all bids by a specific user ID
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getAllBidsByUser(@PathVariable Integer userId) {
+        List<Bid> bids = bidService.findAllBidsByUser(userId);
+        if (bids.isEmpty()) {
+            return ResponseEntity.ok().body("You have no bids, brokie");
+        }
+        return ResponseEntity.ok().body(bids);
+    }
+
 }

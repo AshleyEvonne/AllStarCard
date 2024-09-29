@@ -1,26 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const BidForm = ({ currentPrice, onBidPlaced }) => {
+const BidForm = ({ currentPrice, cardId, startingPrice, currentBidAmount }) => {
   const [bidAmount, setBidAmount] = useState(0);
-  const [ cPrice, setCPrice] = useState(currentPrice)
 
   const handleBidChange = (e) => {
     setBidAmount(e.target.value);
-    console.log("Handle bidchange " + e.target.value)
+    console.log("Handle bidchange " + e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newBid = parseFloat(bidAmount);
-    console.log("new bid " + newBid)
-
-    if (newBid > cPrice) {
-      // onBidPlaced(newBid);
+    console.log(currentPrice);
+    const userId = localStorage.getItem("userId");
+    console.log(bidAmount);
+    const newBid = bidAmount;
+    if (newBid > currentPrice) {
       setBidAmount(newBid);
-      setCPrice(newBid)
-      console.log("current price " + cPrice)
+      console.log("AFTER SUBMIT", typeof bidAmount);
+      try {
+        const data = await fetch(
+          `http://localhost:8081/api/cards/addBid/${userId}/${cardId}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              amount: Number(bidAmount),
+            }),
+          }
+        );
+        const response = await data.json();
+        console.log(response);
+        window.location.reload();
+      } catch (e) {
+        console.error(e);
+      }
     } else {
-      alert('Bid must be higher than the current price!');
+      alert("Bid must be higher than the current price!");
     }
   };
 
@@ -28,9 +45,16 @@ const BidForm = ({ currentPrice, onBidPlaced }) => {
     <form onSubmit={handleSubmit} className="p-4 bg-white rounded shadow-md">
       <h2 className="text-lg font-semibold mb-4">Place Your Bid</h2>
       <div className="mb-4">
-        <label className="block mb-2 text-sm font-medium text-gray-700">
-        Current Price: ${!isNaN(cPrice) ? cPrice.toFixed(2) : 0}
-        </label>
+        {currentBidAmount > 0 ? (
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Current Price: {currentBidAmount}$
+          </label>
+        ) : (
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Current Price: {currentPrice}$
+          </label>
+        )}
+
         <input
           type="number"
           value={bidAmount}

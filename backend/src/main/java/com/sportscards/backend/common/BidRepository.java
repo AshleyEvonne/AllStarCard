@@ -12,6 +12,11 @@ import java.util.Optional;
 
 @Repository
 public interface BidRepository extends JpaRepository<Bid, Integer> {
-    List<Bid> findByBidTime(LocalDateTime now);
+
+    List<Bid> findByUserId(Integer userId);
+
+    Optional<Bid> findByCardIdAndUserId(Integer cardId, Integer userId);
+
+    Optional<Bid> findByCardId(Integer cardId);
 
 }

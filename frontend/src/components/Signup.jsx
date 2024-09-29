@@ -9,7 +9,7 @@ const Signup = () => {
     const navigate = useNavigate();
 
     const registerUser = async(userData) =>{
-        console.log(userData)
+        // console.log(userData)
         try{
             const data = await fetch("http://localhost:8081/api/users/signup", {
                 method:"POST",
@@ -20,18 +20,22 @@ const Signup = () => {
                 body: JSON.stringify(userData)
             })
             const response = await data.text()
-            if ( response === "granted"){
-                localStorage.setItem("token", response)
-            
-                navigate("/")
-                window.location.reload();
+            const responseJSON = JSON.parse(response);
+            if (responseJSON.id) {
+              localStorage.setItem("token", "granted");
+              localStorage.setItem("userId", responseJSON.id);
+              localStorage.setItem("userEmail", responseJSON.email);
+              console.log(localStorage.getItem("userId"));
+              console.log(localStorage.getItem("userEmail"));
+              console.log(localStorage.getItem("token"));
+              navigate("/");
+              window.location.reload();
             } else {
-               alert(response)
+              alert(response);
             }
-        }catch(e)
-        {
-          console.error(e)
-        }
+          } catch (e) {
+            console.error(e);
+          }
       }
 
 
@@ -52,8 +56,8 @@ const Signup = () => {
             registerUser({
                 name : name,
                 email: email,
-                password: password
-            })
+                password: password,
+            });
            
         }
     };

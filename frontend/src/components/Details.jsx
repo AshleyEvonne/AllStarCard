@@ -7,20 +7,33 @@ function Details() {
 
 
 const [product, setProduct] = useState([]);
-
+const [bid, setBid] = useState([]);
   const fetchProduct = async() =>{
     try{
         const data = await fetch(`http://localhost:8081/api/cards/${id}`)
         const response = await data.json()
-        console.log(response)
         setProduct(response)
 
-        
     }catch(e)
     {
       console.error(e)
     }
   }
+  const fetchProductBid = async () => {
+    try {
+      const data = await fetch(`http://localhost:8081/api/bid/card/${id}`);
+      const response = await data.json();
+      console.log(response);
+      setBid(response);
+      if (bid) {
+        console.log("bid found");
+      } else {
+        console.log("Bid not found");
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   useEffect(()=>{
     fetchProduct()
@@ -45,10 +58,20 @@ const [product, setProduct] = useState([]);
         <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
         <p className="text-gray-600 mb-4">{product.description}</p>
         <p className="text-keppel font-bold text-xl mb-4">
-          ${product.startingPrice}
+         Starting Price: ${product.startingPrice}
         </p>
-        <BidForm currentPrice={0}/>
-    </div></div>
+
+        {bid ? (
+              <BidForm
+                currentPrice={product.startingPrice}
+                cardId={id}
+                currentBidAmount={bid.amount}
+              />
+            ) : (
+              <BidForm currentPrice={product.startingPrice} cardId={id} />
+            )}
+    </div>
+    </div>
     </div>
     </div>
   );

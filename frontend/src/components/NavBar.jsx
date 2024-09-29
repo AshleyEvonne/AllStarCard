@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ALLSTARLOGO from "../assets/ALLSTARLOGO.jpg";
 import SearchComponent from "./SearchComponent";
+import { FaUser } from "react-icons/fa";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -50,7 +51,7 @@ const NavBar = () => {
         </button>
         <div className={`w-full md:w-auto ${open ? "block" : "hidden"} md:flex md:items-center md:space-x-6 md:mt-0`}>
           <ul className="grid grid-cols-1 md:flex md:items-center md:space-x-6 gap-4 md:gap-0">
-            <div className="flex justify-around w-full space-x-3">
+            <div className="flex flex-wrap md:flex-nowrap justify-around w-full space-x-3">
               <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
                 <Link
                   to="/"
@@ -61,10 +62,10 @@ const NavBar = () => {
               </li>
               <li className="bg-yellow-500 rounded-lg shadow-md shadow-black ">
                 <Link
-                  to="/products"
+                  to="/cards"
                   className="block py-2 px-3 text-gray-700 hover:text-white transition duration-300 focus:ring-black disabled:opacity-50"
                 >
-                  CARDS
+                CARDS
                 </Link>
               </li>
               <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
@@ -85,30 +86,40 @@ const NavBar = () => {
                   BASEBALL
                 </Link>
               </li>
-              <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
-                {isLoggedIn ? (
-                  <button
-                    onClick={handleLogout}
-                    className="block px-4 py-2 text-gray-700 hover:text-white rounded transition duration-300"
+              {isLoggedIn ? (
+                <>
+                  <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
+                    <button
+                      onClick={() => navigate("/bids")}
+                      className="block py-2 px-3 text-gray-700 hover:text-white transition duration-300"
                     >
-                    LOGOUT
-                  </button>
-                ) : (
+                      <FaUser/>
+                    </button>
+                  </li>
+                  <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
+                    <button
+                      onClick={handleLogout}
+                      className="block px-4 py-2  text-gray-700 hover:text-white rounded transition duration-300"
+                    >
+                      LOGOUT
+                    </button>
+                  </li>
+                </>
+              ) : (
+                <li className="bg-yellow-500 rounded-lg shadow-md shadow-black">
                   <button
                     onClick={() => navigate("/login")}
                     className="block px-4 py-2 text-gray-700 hover:text-white rounded transition duration-300"
                   >
                     LOGIN
                   </button>
-                )}
-              </li>
-              </div>
+                </li>
+              )}
+            </div>
               </ul>
               <div className="mt-2 md:mt-0 md:ml-6">
                 <SearchComponent />
               </div>
-            
-          
         </div>
       </div>
     </div>

@@ -15,25 +15,19 @@ public class BidService {
     @Autowired
     private BidRepository bidRepository;
 
-    public Bid placeBid(Card cardId, User userId, double amount){
-        Bid bid = new  Bid();
-        bid.setCard(cardId);
-        bid.setUser(userId);
-        bid.setAmount(amount);
-        bid.setBidTime(LocalDateTime.now());
-        return bidRepository.save(bid);
-    }
-
     public Bid createBid(Bid bid){
         return bidRepository.save(bid);
     }
 
-    public List<Bid> getActiveBids(){
-        return bidRepository.findByBidTime(LocalDateTime.now());
-    }
+
 
     public Bid getBidById(Integer id){
         return bidRepository.findById(id).orElse(null);
+    }
+
+    // Method to get a bid by cardId
+    public Bid getBidByCardId(Integer cardId) {
+        return bidRepository.findByCardId(cardId).orElse(null);
     }
 
     public Bid updateBid(Integer id, Bid updatedBid) {
@@ -43,14 +37,18 @@ public class BidService {
     }
 
     public void deleteBidById(int id){
-       if (bidRepository.existsById(id)){
-           bidRepository.deleteById(id);
-       }else {
-           throw new RuntimeException("Bid not found with id:" +id);
-       }
+        if (bidRepository.existsById(id)){
+            bidRepository.deleteById(id);
+        }else {
+            throw new RuntimeException("Bid not found with id:" +id);
+        }
     }
 
     public Bid save(Bid bid){
         return bidRepository.save(bid);
+    }
+
+    public List<Bid> findAllBidsByUser(Integer userId) {
+        return bidRepository.findByUserId(userId);
     }
 }

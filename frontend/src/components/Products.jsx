@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import Layout from "./Layout"
 
 
 
@@ -29,7 +28,7 @@ const Products = () => {
     const navigate = useNavigate();
 
   const handleItemClick = (id) => {
-    navigate(`/products/${id}`);
+    navigate(`/cards/${id}`);
   };
 
 
@@ -42,7 +41,7 @@ const Products = () => {
           <h2 className="sr-only">Products</h2>
   
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {console.log(productsList)}
+            {/* {console.log(productsList)} */}
             {productsList.map((product) => (
               <div key={product.id} className="text-center"> 
                <Link to={`/Details/${product.id}`}> 

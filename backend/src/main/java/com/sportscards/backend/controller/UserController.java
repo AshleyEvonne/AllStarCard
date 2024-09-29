@@ -2,7 +2,9 @@ package com.sportscards.backend.controller;
 
 
 import com.sportscards.backend.dto.LoginRequest;
+import com.sportscards.backend.model.Card;
 import com.sportscards.backend.model.User;
+import com.sportscards.backend.service.CardService;
 import com.sportscards.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,9 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private CardService cardService;
 
     @GetMapping
     public List<User> getAllUsers(){
@@ -46,7 +51,7 @@ public class UserController {
         }
         Optional<User> registerUser = userService.saveUser(newUser);
         if(registerUser.isPresent()){
-            return ResponseEntity.ok().body("granted");
+            return ResponseEntity.ok().body(registerUser);
         }else {
             return ResponseEntity.badRequest().body("An error has occurred during registration");
         }
@@ -56,9 +61,20 @@ public class UserController {
     public ResponseEntity<?> loginUser(@RequestBody LoginRequest loginRequest) {
         Optional<User> user = userService.loginUser(loginRequest.getEmail(), loginRequest.getPassword());
         if (user.isPresent()) {
-            return ResponseEntity.ok().body("granted");
+            return ResponseEntity.ok().body(user);
         } else {
             return ResponseEntity.badRequest().body("Email or Password is Incorrect");
+        }
+    }
+
+    // API to get all cards from all bids placed by the user
+    @GetMapping("/{userId}/bids/cards")
+    public ResponseEntity<List<Card>> getAllCardsFromUserBids(@PathVariable Integer userId) {
+        List<Card> cards = cardService.getAllCardsFromUserBids(userId);
+        if (!cards.isEmpty()) {
+            return ResponseEntity.ok().body(cards);
+        } else {
+            return ResponseEntity.noContent().build();
         }
     }
 

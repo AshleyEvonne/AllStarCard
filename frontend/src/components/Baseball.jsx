@@ -9,7 +9,6 @@ const Baseball = () => {
         try{
             const data = await fetch("http://localhost:8081/api/cards/all");
             const response = await data.json()
-            console.log(response)
             setProducts(response)
   
             
