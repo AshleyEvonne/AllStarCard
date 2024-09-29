@@ -35,7 +35,7 @@ public class BidController {
         if (bid != null) {
             return ResponseEntity.ok().body(bid);
         } else {
-            return ResponseEntity.badRequest().body("Oops no bid");
+            return ResponseEntity.badRequest().body("Oops no bids");
         }
     }
 
@@ -52,7 +52,7 @@ public class BidController {
     public ResponseEntity<?> getAllBidsByUser(@PathVariable Integer userId) {
         List<Bid> bids = bidService.findAllBidsByUser(userId);
         if (bids.isEmpty()) {
-            return ResponseEntity.ok().body("You have no bids, brokie");
+            return ResponseEntity.ok().body("You have no bids placed");
         }
         return ResponseEntity.ok().body(bids);
     }

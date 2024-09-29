@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CreditCardForm from "./CreditCardForm";
 
 function UserBid() {
   const [userBids, setUserBids] = useState([]);
@@ -39,7 +40,7 @@ function UserBid() {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {userBids.length === 0 ? (
-            <p>Damn playah, get your money up</p>
+            <p>No Bids Placed</p>
           ) : (
             <>
               {userBids.map((bid, i) => (
@@ -62,12 +63,15 @@ function UserBid() {
                   <p className="mt-1 text-lg font-medium text-gray-900">
                     Your Bid is ${bidAmounts[i].amount}
                   </p>
+                  
                 </div>
               ))}
             </>
           )}
         </div>
+        <CreditCardForm />
       </div>
+      
     </div>
   );
 }

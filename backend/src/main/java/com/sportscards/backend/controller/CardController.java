@@ -42,7 +42,7 @@ public class CardController {
         if(bidUpdated.isPresent()) {
             return ResponseEntity.ok().body(bidUpdated.get());
         }
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Oops, something happened. Bid, card, or user not found.");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Bid, card, or user not found.");
     }
 
 

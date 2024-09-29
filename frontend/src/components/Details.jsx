@@ -8,6 +8,7 @@ function Details() {
 
 const [product, setProduct] = useState([]);
 const [bid, setBid] = useState([]);
+
   const fetchProduct = async() =>{
     try{
         const data = await fetch(`http://localhost:8081/api/cards/${id}`)
@@ -36,7 +37,8 @@ const [bid, setBid] = useState([]);
   };
 
   useEffect(()=>{
-    fetchProduct()
+    fetchProduct();
+    fetchProductBid();
   },[])
 
 

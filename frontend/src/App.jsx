@@ -9,6 +9,7 @@ import Signup from "./components/Signup";
 import Basketball from "./components/Basketball";
 import Baseball from "./components/Baseball";
 import Layout from "./components/Layout";
+import UserBid from "./components/UserBid";
 
 function App() {
   return (
@@ -28,8 +29,9 @@ function App() {
           <Route path="/BasketBall" element={<Basketball />}/>
           <Route path="/BaseBall" element={<Baseball/>}/>
           <Route path="/Details/:id" element={<Details/>}/>
+          <Route path="/Bids" element={<UserBid />} />
           </Routes>
-       <Layout/>
+       {/* <Layout/> */}
     </>
   );
 }
