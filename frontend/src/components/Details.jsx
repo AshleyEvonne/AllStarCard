@@ -5,6 +5,12 @@ import BidForm from "./BidForm";
 function Details() {
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
+   const handleBackClick = () => {
+    window.history.back(); // Navigate to the previous route
+  };
+
 
 const [product, setProduct] = useState([]);
 const [bid, setBid] = useState([]);
@@ -48,9 +54,16 @@ const [bid, setBid] = useState([]);
     <div className="container mx-auto p-4">
       <button
         className="mb-4 bg-saffron text-onyx px-4 py-2 rounded hover:bg-keppel"
+        onClick={handleBackClick}
       >
-        Back to All Items
+       Go Back
       </button>
+      <button
+            className="mb-4 bg-saffron text-onyx px-4 py-2 rounded hover:bg-keppel ml-4"
+            onClick={() => navigate("/cards")}
+          >
+            Back to All Items
+          </button>
       <div className="bg-platinum p-6 rounded-lg shadow-md border-solid border-4 border-white">
         <img
           src={product.imageUrl}

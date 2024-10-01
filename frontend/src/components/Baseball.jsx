@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import Layout from "./Layout"
 
 const Baseball = () => {
 
@@ -48,9 +49,9 @@ const Baseball = () => {
                   />
                 </div>
                 </Link>
-                  <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
+                  <h3 className="mt-4 text-sm text-black font-bold">{product.name}</h3>
                   <h3 className="mt-4 text-sm text-gray-700">{product.description}</h3>
-                  <p className="mt-1 text-lg font-medium text-gray-900">{product.startingPrice}</p>
+                  <p className="mt-1 text-lg font-medium text-gray-900">$ {product.startingPrice}</p>
                 </div>
               ))}
             </div>

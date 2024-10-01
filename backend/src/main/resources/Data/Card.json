@@ -4,8 +4,8 @@
     "name":"LEBRON JAMES",
     "type": "BasketBall",
     "description":"2003 Topps Draft Day",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"500",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117378/LBJRookieC-1_m5c0lr.jpg"
 
@@ -15,8 +15,8 @@
     "name":"STEPH CURRY",
     "type": "BasketBall",
     "description":"2017 PSA Panini Optic Steph Curry",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"350",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117371/CURRY-1_wsvbqc.jpg"
 
@@ -26,8 +26,8 @@
     "name":"GIANNIS ANTETOKOUNMPO",
     "type": "BasketBall",
     "description":"2019 PSA Panini Chronicles",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"125",
+    "currentPrice": "",
     "status": "Closed",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117372/GIANNIS-1_rxj9yp.jpg"
 
@@ -37,8 +37,8 @@
     "name":"KYRIE IRVING",
     "type": "BasketBall",
     "description":"PSA Panini Hoops",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"200",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117372/KAI-1_qreyrj.jpg"
 
@@ -48,8 +48,8 @@
     "name":"KEVIN DURANT",
     "type": "BasketBall",
     "description":"2007 Upper Deck",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"350",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117374/KD-1_jmzqi8.jpg"
 
@@ -59,8 +59,8 @@
     "name":"KOBE BRYANT",
     "type": "BasketBall",
     "description":"2019 Panini Prizm Kobe Final Game",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"550",
+    "currentPrice": "",
     "status": "Closed",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117377/KobeFinalgame-1_ywy1gb.jpg"
 
@@ -70,8 +70,8 @@
     "name":"MICHAEL JORDAN",
     "type": "BasketBall",
     "description":"1990 FLEER Michael Jordan",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"480",
+    "currentPrice": "",
     "status": "Closed",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117380/MJ1990-1_rdc5u4.jpg"
 
@@ -81,8 +81,8 @@
     "name":"CARMELO ANTHONY",
     "type": "BasketBall",
     "description":"2003 UPPER DECK ROOKIE",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"340",
+    "currentPrice": "",
     "status": "Closed",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727226947/CarmeloRookie_cfossm.jpg"
 
@@ -92,8 +92,8 @@
     "name":"MIKE TROUT",
     "type": "BaseBall",
     "description":"2013 TOPPS",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"200",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117438/Mike-1_bx61ai.jpg"
 
@@ -103,8 +103,8 @@
     "name":"AARON JUDGE",
     "type": "BaseBall",
     "description":"2022 TOPPS NOW",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"500",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117436/AJUDGE-1_jal7hs.jpg"
 
@@ -114,8 +114,8 @@
     "name":"MOOKIE BETTS",
     "type": "BaseBall",
     "description":"2023 BOWMAN MEGA BOX",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"250",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117439/Mookie-1_lb5wvd.webp"
 
@@ -125,8 +125,8 @@
     "name":"SHOHEI OHTANI",
     "type": "BaseBall",
     "description":"2018 TOPPS UPDATE",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"250",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117441/OHTANI-1_ynhrnd.jpg"
   },
@@ -135,8 +135,8 @@
     "name":"JUAN SOTO",
     "type": "BaseBall",
     "description":"2018 TOPPS CHROME",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"150",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117443/SOTO-1_arai9e.webp"
   },
@@ -145,9 +145,150 @@
     "name":"VLADIMIR GUERRERO JR.",
     "type": "BaseBall",
     "description":"2019 TOPPS UPDATE",
-    "startingPrice":"2500",
-    "currentPrice": "2500",
+    "startingPrice":"110",
+    "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727117444/VLAD-1_fcsims.jpg"
+  },
+  {
+    "id": 15,
+    "name": "DEREK JETER",
+    "type": "BaseBall",
+    "description": "2008 TOPPS",
+    "startingPrice": "350",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727724937/Jeter_lfpy18.jpg"
+  },
+  {
+    "id": 16,
+    "name": "DAMIAN LILLARD",
+    "type": "BasketBall",
+    "description": "2019 NBA HOOPS",
+    "startingPrice": "150",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727724944/DAME_b49ncj.jpg"
+  },
+  {
+    "id": 17,
+    "name": "ALBERT PUJOLS",
+    "type": "BaseBall",
+    "description": "2017 PANINI DMD KINGS",
+    "startingPrice": "150",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727724944/Albert-Pujols_fbzu01.jpg"
+  },
+  {
+    "id": 18,
+    "name": "DAVID ORTIZ",
+    "type": "BaseBall",
+    "description": "2013 TOPPS  A & G",
+    "startingPrice": "100",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727729284/David-ortiz_k1yd3e.jpg"
+  },
+  {
+    "id": 19,
+    "name": "TIM DUNCAN",
+    "type": "BasketBall",
+    "description": "1997-98 ULTRA",
+    "startingPrice": "260",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727724945/Tim-Duncan_vvij7d.jpg"
+  },
+  {
+    "id": 20,
+    "name": "HIDEKI MATSUI",
+    "type": "BaseBall",
+    "description": "2004 DONRUSS TEAM HEROES",
+    "startingPrice": "450",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727724945/Hideki-matsui_isev9p.jpg"
+  },
+  {
+    "id": 21,
+    "name": "PATRICK EWING",
+    "type": "BasketBall",
+    "description": "1987 FLEER ",
+    "startingPrice": "138",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727731914/PatrickEwing_wqiiuh.jpg"
+  },
+  {
+    "id": 21,
+    "name": "RONALD ACUNA JR",
+    "type": "BaseBall",
+    "description": "2018 TOPPS CHROME",
+    "startingPrice": "123",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727731914/RA.JR_tllkx5.jpg"
+  },
+  {
+    "id": 22,
+    "name": "VINCE CARTER",
+    "type": "BasketBall",
+    "description": "1998 TOPPS",
+    "startingPrice": "138",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727741835/VC_czxeuo.jpg"
+  },
+  {
+    "id": 23,
+    "name": "BABE RUTH",
+    "type": "BaseBall",
+    "description": "1962 TOPPS ",
+    "startingPrice": "375",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727743626/BabeRuth_udwica.jpg"
+  },
+  {
+    "id": 24,
+    "name": "ALEX RODRIGUEZ",
+    "type": "BaseBall",
+    "description": "1994 FLEER PROCARDS",
+    "startingPrice": "340",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727731923/AROD_vikrbp.jpg"
+  },
+  {
+    "id": 25,
+    "name": "LARRY BIRD",
+    "type": "BasketBall",
+    "description": "1990 SKYBOX",
+    "startingPrice": "279",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727745150/LarryBird_ihuv4n.jpg"
+  },
+  {
+    "id": 26,
+    "name": "LAMELO BALL",
+    "type": "BasketBall",
+    "description": "2020 PANINI PRIZM",
+    "startingPrice": "279",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727745147/Lamelo_rn9tvr.jpg"
+  },
+  {
+    "id": 27,
+    "name": "JA MORANT",
+    "type": "BasketBall",
+    "description": "2019 PANINI CHRONICLES",
+    "startingPrice": "135",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727746081/jamorant_bav2xw.jpg"
   }
+
 ]

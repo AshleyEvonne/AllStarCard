@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-700 via-fuchsia-500 to-orange-400">
-      {children}
+    // <div className="min-h-screen bg-gradient-to-b from-purple-700 via-fuchsia-500 to-orange-400">
+      // {children}
 
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
@@ -32,6 +32,6 @@ export default function Layout({ children }) {
           </div>
         </div>
       </footer>
-    </div>
+  //   </div>
   );
 }

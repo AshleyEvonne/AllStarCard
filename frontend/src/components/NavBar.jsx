@@ -63,7 +63,7 @@ const NavBar = () => {
               <li className="bg-yellow-500 rounded-lg shadow-md shadow-black ">
                 <Link
                   to="/cards"
-                  className="block py-2 px-3 text-gray-700 hover:text-white transition duration-300 focus:ring-black disabled:opacity-50"
+                  className="block py-2 px-3 text-gray-700 hover:text-white transition duration-300"
                 >
                 CARDS
                 </Link>

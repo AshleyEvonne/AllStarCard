@@ -24,7 +24,7 @@ export default function Carousel({ items = [] }) {
               <img src={item.image} alt={item.name} className="w-full h-64 object-contain bg-white" />
               <div className="bg-gray-200 p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
-                <p className="text-lg">Current Bid: ${item.currentBid}</p>
+                {/* <p className="text-lg">Current Bid: ${item.currentBid}</p> */}
               </div>
             </div>
           ))}

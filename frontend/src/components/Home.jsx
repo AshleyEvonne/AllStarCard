@@ -10,9 +10,9 @@ import Mike1 from "../assets/baseball/Mike-1.jpg"
 import Melo from "../assets/basketball/CarmeloRookie.jpg"
 
 const featuredCards = [
-  { id: 1, name: "Lebron James Rookie Card", image: LBJrook, currentBid: 100 },
-  { id: 2, name: "Mike Trout Autographed Card", image:Mike1, currentBid: 100 },
-  { id: 3, name: "Carmelo Anthony Rookie Card", image: Melo, currentBid: 100 },
+  { id: 1, name: "Lebron James Rookie Card", image: LBJrook,},
+  { id: 2, name: "Mike Trout Autographed Card", image:Mike1 },
+  { id: 3, name: "Carmelo Anthony Rookie Card", image: Melo},
 ];
 
 
@@ -24,14 +24,15 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    // <Layout>
+    <div className="min-h-screen bg-gradient-to-b from-purple-700 via-fuchsia-500 to-orange-400">
       <main className="container mx-auto mt-8 px-4 pt-8">
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-4 text-gray-800">Featured Cards</h2>
           <Carousel items={featuredCards} />
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="text-3xl font-bold mb-4 text-gray-800">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card>
@@ -62,10 +63,11 @@ export default function Home() {
           <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Bidding?</h2>
             <p className="mb-6">Join thousands of collectors and start building your dream sports card collection today!</p>
-            <Button onClick={handleClick}>Sign Up Now</Button>
+            <Button onClick={handleClick}>SIGN UP NOW</Button>
           </div>
         </section>
       </main>
-    </Layout>
+      </div>
+    // </Layout>
   );
 }
