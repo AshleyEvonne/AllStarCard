@@ -27,7 +27,7 @@ const NavBar = () => {
           <img
             src={ALLSTARLOGO}
             alt="Logo"
-            className="h-16 md:h-24 rounded-lg cursor-pointer border-solid border-4 border-white"
+            className="h-16 md:h-24 block md:hidden lg:block rounded-lg cursor-pointer border-solid border-4 border-white"
           />
         </Link>
         <button

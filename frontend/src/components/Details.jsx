@@ -53,22 +53,16 @@ const [bid, setBid] = useState([]);
       <div>
     <div className="container mx-auto p-4">
       <button
-        className="mb-4 bg-saffron text-onyx px-4 py-2 rounded hover:bg-keppel"
-        onClick={handleBackClick}
-      >
-       Go Back
-      </button>
-      <button
-            className="mb-4 bg-saffron text-onyx px-4 py-2 rounded hover:bg-keppel ml-4"
+            className="bg-yellow-500 rounded-lg shadow-md shadow-black mb-4 bg-saffron text-onyx px-4 py-2 hover:text-white ml-4"
             onClick={() => navigate("/cards")}
           >
-            Back to All Items
+            BACK
           </button>
       <div className="bg-platinum p-6 rounded-lg shadow-md border-solid border-4 border-white">
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-full h-64 object-contain mb-4 rounded"
+          className="w-full h-96 object-contain mb-4 rounded"
         />
         <h2 className="text-2xl font-bold mb-2">{product.name}</h2>
         <p className="text-gray-600 mb-4">{product.description}</p>

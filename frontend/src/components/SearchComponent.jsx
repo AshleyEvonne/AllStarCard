@@ -54,14 +54,14 @@ const SearchComponent = () => {
         placeholder="Search..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="border border-gray-300 rounded-lg p-2 w-full md:w-64"
+        className="border border-gray-300 rounded-lg p-2 w-full md:w-52"
       />
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
         <p className="text-red-500">{error}</p>
       ) : searchQuery && filteredItems.length > 0 ? (
-        <ul className="absolute bg-white shadow-md rounded-lg mt-2 w-full md:w-64 z-10">
+        <ul className="absolute bg-white shadow-md rounded-lg mt-2 w-full md:w-52 z-10">
           {filteredItems.map(item => (
             <li
               key={item.id}

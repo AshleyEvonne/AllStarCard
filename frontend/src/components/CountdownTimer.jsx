@@ -62,13 +62,9 @@ const CountdownTimer = () => {
         });
     
     return (
-        <section className="timer-container flex flex-col items-center justify-center">
-            <section className="timer bg-white p-8 rounded-lg shadow-lg text-center">
-                <div className="mb-6">
-                    <span className="mdi mdi-calendar-clock timer-icon text-4xl text-purple-700"></span>
-                    
-                </div>
-                <div className="flex justify-center space-x-4 text-2xl font-semibold text-gray-800">
+        <section className="timer-container flex flex-col items-center justify-center m-4">
+            <section className="timer bg- p-4 md:p-6 lg:p-8 rounded-lg shadow-lg text-center"> Bid Ends In:
+                <div className="flex justify-center space-x-2 md:space-x-4 lg:space-x-6 text-lg md:text-2xl lg:text-3xl font-semibold text-gray-800">
                     <section className="flex flex-col items-center">
                         <p className="text-black">{timerDays}</p>
                         <p className="text-sm text-gray-600"><small>Days</small></p>
