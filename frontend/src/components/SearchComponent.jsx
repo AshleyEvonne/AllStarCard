@@ -14,7 +14,7 @@ const SearchComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8081/api/cards/all'); // Replace with your API endpoint
+        const response = await fetch('http://localhost:8081/api/cards/all');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

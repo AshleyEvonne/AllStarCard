@@ -6,6 +6,8 @@ function UserBid() {
   const [userBids, setUserBids] = useState([]);
   const [bidAmounts, setBidAmount] = useState([]);
   const userId = localStorage.getItem("userId");
+  const name = localStorage.getItem("name");
+  console.log(userId);
   const fetchUserBids = async () => {
     try {
       const data = await fetch(
@@ -34,6 +36,7 @@ function UserBid() {
     fetchBidAmounts();
   }, []);
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-purple-700 via-fuchsia-500 to-orange-400 mt-8">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>

@@ -26,11 +26,14 @@ const Login = () => {
 
       const response = await data.text();
       const responseJSON = JSON.parse(response);
+      console.log(response);
+      console.log(responseJSON);
 
       if (responseJSON.id) {
         localStorage.setItem("token", "granted");
         localStorage.setItem("userId", responseJSON.id);
         localStorage.setItem("userEmail", responseJSON.email);
+        localStorage.setItem("name", responseJSON.name);
         console.log(localStorage.getItem("userId"));
         console.log(localStorage.getItem("userEmail"));
         console.log(localStorage.getItem("token"));
@@ -47,9 +50,7 @@ const Login = () => {
     }
   };
 
-  // const togglePasswordVisibility = () => {
-  //   setShowPassword(!showPassword);
-  // };
+
 
   return (
     <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gradient-to-b from-purple-700 via-fuchsia-500 to-orange-400">

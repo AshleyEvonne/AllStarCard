@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Bounce, toast} from 'react-toastify';
 import React from 'react'
 import Cards from "react-credit-cards-2";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
@@ -18,6 +19,20 @@ function CreditCardForm() {
     };
     const handleInputFocus = (e) => {
         setState((prev) => ({...prev, focus: e.target.name}));
+    };
+    const notify = () => {
+        // Display the toast message
+        toast.info("Confirmation sent to email", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            transition: Bounce,
+        });
     };
 
   return (
@@ -85,10 +100,14 @@ function CreditCardForm() {
                         </div>
                     </div>
                     <div className="d-grid">
-                        <button className="text-gray-700 bg-yellow-500 rounded-md shadow-md shadow-black mb-3">CONFIRM
+                        <button 
+                        type="button"
+                        className="text-gray-700 bg-yellow-500 rounded-md shadow-md shadow-black mb-3 hover:text-white"
+                        onClick={notify}>
+                            CONFIRM
                         </button>
-                </div>
-            </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

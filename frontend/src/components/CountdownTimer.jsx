@@ -66,22 +66,22 @@ const CountdownTimer = () => {
             <section className="timer bg- p-4 md:p-6 lg:p-8 rounded-lg shadow-lg text-center"> Bid Ends In:
                 <div className="flex justify-center space-x-2 md:space-x-4 lg:space-x-6 text-lg md:text-2xl lg:text-3xl font-semibold text-gray-800">
                     <section className="flex flex-col items-center">
-                        <p className="text-black">{timerDays}</p>
+                        <p className="text-green-500">{timerDays}</p>
                         <p className="text-sm text-gray-600"><small>Days</small></p>
                     </section>
-                    <span className="text-purple-700">:</span>
+                    <span className="text-black">:</span>
                     <section className="flex flex-col items-center">
-                        <p className="text-black">{timerHours}</p>
+                        <p className="text-green-500">{timerHours}</p>
                         <p className="text-sm text-gray-600"><small>Hours</small></p>
                     </section>
-                    <span className="text-purple-700">:</span>
+                    <span className="text-black">:</span>
                     <section className="flex flex-col items-center">
-                        <p className="text-black">{timerMinutes}</p>
+                        <p className="text-green-500">{timerMinutes}</p>
                         <p className="text-sm text-gray-600"><small>Minutes</small></p>
                     </section>
-                    <span className="text-purple-700">:</span>
+                    <span className="text-black">:</span>
                     <section className="flex flex-col items-center">
-                        <p className="text-black">{timerSeconds}</p>
+                        <p className="text-green-500">{timerSeconds}</p>
                         <p className="text-sm text-gray-600"><small>Seconds</small></p>
                     </section>
                 </div>

@@ -289,6 +289,16 @@
     "currentPrice": "",
     "status": "Active",
     "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727746081/jamorant_bav2xw.jpg"
+  },
+  {
+    "id": 28,
+    "name": "DERRICK ROSE",
+    "type": "BasketBall",
+    "description": "2008",
+    "startingPrice": "140",
+    "currentPrice": "",
+    "status": "Active",
+    "imageUrl": "https://res.cloudinary.com/dtdm9ijtl/image/upload/v1727966334/DerrickRose_vp7fh0.jpg"
   }
 
 ]

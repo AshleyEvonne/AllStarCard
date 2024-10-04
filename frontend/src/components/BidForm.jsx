@@ -1,26 +1,21 @@
 import React, { useState } from "react";
-import {Bounce, Slide, toast} from 'react-toastify';
+import {Bounce, toast} from 'react-toastify';
 import CountdownTimer from "./CountdownTimer";
-// import 'react-toastify/dist/ReactToastify.css';
 
 
-const BidForm = ({ currentPrice, cardId, startingPrice, currentBidAmount }) => {
+const BidForm = ({ currentPrice, cardId, currentBidAmount }) => {
   const [bidAmount, setBidAmount] = useState(0);
 
   const handleBidChange = (e) => {
     setBidAmount(e.target.value);
-    console.log("Handle bidchange " + e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(currentPrice);
     const userId = localStorage.getItem("userId");
-    console.log(bidAmount);
     const newBid = bidAmount;
     if (newBid > currentPrice) {
       setBidAmount(newBid);
-      console.log("AFTER SUBMIT", typeof bidAmount);
       try {
         const data = await fetch(
           `http://localhost:8081/api/cards/addBid/${userId}/${cardId}`,
@@ -35,7 +30,6 @@ const BidForm = ({ currentPrice, cardId, startingPrice, currentBidAmount }) => {
           }
         );
         const response = await data.json();
-        console.log(response);
         localStorage.setItem("bidSuccess", "true");
         window.location.reload();
     
